@@ -9,9 +9,9 @@ import "@openzeppelin/contracts/utils/math/Math.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 /**
- * @title TokenVesting
+ * @notice A vesting and locking contract for SVC tokens
  */
-contract TokenVesting is Ownable, ReentrancyGuard{
+contract SVCTokenVesting is Ownable, ReentrancyGuard{
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
     struct VestingSchedule{

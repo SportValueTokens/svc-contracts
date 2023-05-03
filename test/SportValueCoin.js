@@ -1,5 +1,5 @@
-const { expect } = require("chai");
-const { ethers } = require("hardhat");
+const {expect} = require("chai");
+const {ethers} = require("hardhat");
 
 describe("Sport Value Coin", function () {
     let owner
@@ -13,18 +13,17 @@ describe("Sport Value Coin", function () {
     });
 
     beforeEach(async () => {
-        token = await Token.deploy();
+        token = await Token.deploy('Test Sport Value Coin', 'SVC', 100);
         await token.deployed();
-        await token.mint(owner.address, 100);
     });
 
     describe('Deployment', () => {
         it("should initialise the token", async () => {
             const ownerBalance = await token.balanceOf(owner.address);
             expect(await token.totalSupply()).to.equal(ownerBalance);
-            expect(await token.hasRole(token.DEFAULT_ADMIN_ROLE(),owner.address)).to.equal(true);
-            expect(await token.hasRole(token.PAUSER_ROLE(),owner.address)).to.equal(true);
-            expect(await token.hasRole(token.MINTER_ROLE(),owner.address)).to.equal(true);
+            expect(await token.hasRole(token.DEFAULT_ADMIN_ROLE(), owner.address)).to.equal(true);
+            expect(await token.hasRole(token.PAUSER_ROLE(), owner.address)).to.equal(true);
+            expect(await token.hasRole(token.MINTER_ROLE(), owner.address)).to.equal(true);
         })
     })
 

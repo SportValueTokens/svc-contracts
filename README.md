@@ -17,5 +17,5 @@ The project uses Hardhat framework.
 * Run tests: ```yarn test```
 
 In order to deploy to a live network, you need a private key and a node endpoint. Currently, hardhat.config.js is configured to use Infura.
-* Deploy: ```npx hardhat run scripts/deploy-svc.js --network <network name>```
+* Deploy: ```npx hardhat run scripts/deployment.js --network <network name>```
 

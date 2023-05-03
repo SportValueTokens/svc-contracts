@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
-import "../vesting/TokenVesting.sol";
+import "../vesting/SVCTokenVesting.sol";
 
 /**
  * @title MockTokenVesting
  * WARNING: use only for testing and debugging purpose
  */
-contract MockTokenVesting is TokenVesting {
+contract MockTokenVesting is SVCTokenVesting {
 
     uint256 mockTime = 0;
 
-    constructor(address token_) TokenVesting(token_){
+    constructor(address token_) SVCTokenVesting(token_){
     }
 
     function setCurrentTime(uint256 _time)
