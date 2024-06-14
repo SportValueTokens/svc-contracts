@@ -10,7 +10,7 @@ The project uses Hardhat framework.
 
 # Building and Deploying
 
-* Install node.js (18.x)
+* Install node.js (20.x)
 * Install yarn: ```npm install --global yarn```
 * Fetch dependencies: ```yarn install```
 * Compile: ```yarn compile```
