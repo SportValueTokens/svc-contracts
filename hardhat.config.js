@@ -1,10 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("@nomiclabs/hardhat-etherscan");
-require('hardhat-abi-exporter');
 require('dotenv').config();
 require("solidity-coverage");
-require('hardhat-contract-sizer');
-require("hardhat-gas-reporter");
 const {task} = require("hardhat/config");
 const deployment = require("./scripts/deployment");
 
@@ -80,7 +76,7 @@ module.exports = {
     apiKey: process.env.ETHERSCAN_API_KEY
   },
   solidity: {
-    version: "0.8.17",
+    version: "0.8.20",
     settings: {
       optimizer: {
         enabled: true,
